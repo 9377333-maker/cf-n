@@ -11,7 +11,7 @@ DNSHE (https://dnshe.com) 提供免费域名，支持 `cc.cd` 等后缀，免费
 ## 注册流程（浏览器操作）
 
 1. 打开 https://dnshe.com，用 Gmail 登录
-2. 搜索想要的域名（如 `bssq.cc.cd`）
+2. 搜索想要的域名（如 `example.cc.cd`）
    - 注意：短域名可能已被注册，换一个再试
 3. 点击注册，选择 **1 年免费**
 4. 重复直到用完配额或够用为止
@@ -20,9 +20,9 @@ DNSHE (https://dnshe.com) 提供免费域名，支持 `cc.cd` 等后缀，免费
 
 | 域名 | 用途 |
 |------|------|
-| `iot88.cc.cd` | 备用 |
-| `edge88.cc.cd` | 备用 |
-| `bssq.cc.cd` | 本项目使用 |
+| `example1.cc.cd` | 备用 |
+| `example2.cc.cd` | 备用 |
+| `example.cc.cd` | 本项目使用 |
 
 ## NS 修改（绑定 Cloudflare）
 
