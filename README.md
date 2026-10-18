@@ -39,7 +39,7 @@ cf-n/
 │   ├── 01-domain-dnshe.md    # DNSHE 免费域名注册
 │   ├── 02-cloudflare-setup.md # Cloudflare Token/Zone 配置
 │   ├── 03-worker-deploy.md   # Worker 部署
-│   ├── 04-panel-deploy.md    # 面板部署（Vercel）
+│   ├── 04-panel-deploy.md    # 面板部署（Vercel，可选）
 │   └── 05-troubleshooting.md # 故障排查
 ├── worker/
 │   └── _worker.js            # cfnew 精简内核（byJoey/cfnew core-only 分支）
@@ -58,14 +58,14 @@ cf-n/
 1. [01-domain-dnshe.md](docs/01-domain-dnshe.md) — 注册免费域名（约 10 分钟，需浏览器）
 2. [02-cloudflare-setup.md](docs/02-cloudflare-setup.md) — 配置 Cloudflare（约 15 分钟）
 3. [03-worker-deploy.md](docs/03-worker-deploy.md) — 部署 Worker（约 10 分钟，纯 API）
-4. [04-panel-deploy.md](docs/04-panel-deploy.md) — 部署面板（约 15 分钟，需浏览器+Vercel 账号）
+4. [04-panel-deploy.md](docs/04-panel-deploy.md) — 部署面板（可选）（约 15 分钟，需浏览器+Vercel 账号）
 5. [05-troubleshooting.md](docs/05-troubleshooting.md) — 出问题时查
 
 ## 核心概念
 
 - **cfnew**：byJoey 开源的 Cloudflare Worker 代理内核，core-only 分支仅 37KB
 - **UUID (`u`)**：既是代理认证凭据，也是面板登录凭据，必须换成自己生成的
-- **KV (`C`)**：可选，面板在线保存配置用
+- **KV (`C`)**：必选，面板在线保存配置用
 - **面板**：独立部署，不处理代理流量，只负责配置管理和订阅生成
 
 ## 注意事项
