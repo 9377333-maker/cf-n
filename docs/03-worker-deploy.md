@@ -13,7 +13,7 @@
 |----|-----|------|
 | 兼容日期 | `2026-01-20` | 必须，否则部分 API 不可用 |
 | 变量 `u` | `YOUR_UUID` | **必填**，标准 8-4-4-4-12 格式 UUID；既是代理认证凭据，也是面板登录凭据 |
-| KV 绑定 | 绑定名 `C` | 可选，面板在线保存配置用 |
+| KV 绑定 | 绑定名 `C` | 必选，面板在线保存配置用 |
 
 > **重要**：`u` 建议用 **secret 方式**设置。用普通 vars 方式时，面板可能连接失败（实测）。
 > 生成 UUID：`python3 -c "import uuid; print(uuid.uuid4())"`
@@ -30,7 +30,7 @@ python3 scripts/deploy-worker.py \
   --script-name YOUR_WORKER_NAME \
   --worker-file worker/_worker.js \
   --uuid YOUR_UUID \
-  --kv-id YOUR_KV_ID \          # 可选，不需要 KV 时去掉
+  --kv-id YOUR_KV_ID \          # 必选
   --compatibility-date 2026-01-20
 ```
 
@@ -48,7 +48,7 @@ python3 scripts/set-secret.py \
 
 调用 `PUT /accounts/{id}/workers/scripts/{name}/secrets`。
 
-### 3. 创建 KV（可选）
+### 3. 创建 KV（必选）
 
 ```bash
 # 创建
