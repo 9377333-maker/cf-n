@@ -20,7 +20,7 @@
 ```bash
 export CLOUDFLARE_TOKEN="YOUR_TOKEN"
 
-# 创建 zone（以 bssq.cc.cd 为例）
+# 创建 zone（以 example.cc.cd 为例）
 python3 scripts/cf-api.py POST /zones '{"name":"YOUR_DOMAIN","account":{"id":"YOUR_ACCOUNT_ID"}}'
 ```
 
